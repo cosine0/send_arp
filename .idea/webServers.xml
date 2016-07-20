@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3ef5bd17-58b5-4629-a254-207c5c94147d" name="init" url="http://inha2nit.iptime.org">
+        <fileTransfer host="inha2nit.iptime.org" port="37022" accessType="SFTP" password="dfd9dfc1dfd9dfc7dfd9df8adfdedffadfccdf8adfcbdfc1dfdedfcedfc7dfccdf8adfcedfc1dfdbdfd9dfc6dfcfdfc1df84" username="cos">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="37022" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
