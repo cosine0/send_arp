@@ -92,7 +92,7 @@ def main():
     my_ip = addresses[netifaces.AF_INET][0]['addr']
     my_ip_bytes = ipaddress.ip_address(my_ip.decode('ascii')).packed
 
-    recipient_ip = raw_input('recipient(gateway) ip: ').decode('ascii')
+    recipient_ip = netifaces.gateways()['default'][netifaces.AF_INET][1].decode('ascii')
     victim_ip = raw_input('input victim_ip: ').decode('ascii')
     print
 
