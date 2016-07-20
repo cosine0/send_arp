@@ -86,6 +86,8 @@ class ARP(object):
 def main():
     if len(sys.argv) != 2:
         print 'Usage: python send_arp.py <victim ip>'
+        exit(1)
+        
     device_name = pcap.lookupdev()
     addresses = netifaces.ifaddresses(device_name)
 
