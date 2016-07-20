@@ -1,7 +1,9 @@
 How to use
 =============
 on debian/ubuntu
-git clone
+```
+git clone  
 
-sudo pip install -r requirements.txt
-sudo python2 arp_spoof.py
+sudo pip install -r requirements.txt  
+sudo python2 arp_spoof.py  
+```
